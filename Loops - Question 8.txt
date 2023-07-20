@@ -1,0 +1,24 @@
+Question 8
+
+
+public class Question8 {
+
+    public static void main(String[] args) {
+        int start = 12;
+        int end = 50;
+
+        System.out.println("Even numbers from " + start + " to " + end + ":");
+        
+        int currentNumber = start;
+
+        do {
+            // Check if the current number is even
+            if (currentNumber % 2 == 0) {
+                System.out.print(currentNumber + " ");
+            }
+
+            // Increment to the next number
+            currentNumber++;
+        } while (currentNumber <= end);
+    }
+}

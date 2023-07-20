@@ -1,0 +1,46 @@
+Question 5
+
+
+import java.util.Scanner;
+public class Question5 {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Get student's full name
+        System.out.print("Enter student's full name: ");
+        String fullName = scanner.nextLine();
+        
+        // Get student's score
+        System.out.print("Enter your score: ");
+        double score = scanner.nextDouble();
+
+
+        // Output the student's name, subjects, score, and grades
+        System.out.println("\nStudent Name: " + fullName);
+        System.out.println("------------------------------");
+        System.out.println("Score: " + score);
+        System.out.println("------------------------------");
+        System.out.println("Grade: " + getGrade(score));
+        System.out.println("------------------------------");
+    
+
+        scanner.close();
+    }
+
+    public static String getGrade(double score) {
+        if (score >= 70) {
+            return "A";
+        } else if (score >= 60 || score <= 69 ) {
+            return "B";
+        } else if (score >= 50 || score <= 59 ) {
+            return "C";
+        } else if (score >= 40 || score <= 49 ) {
+            return "D";
+        } else if (score < 40) {
+            return "F";
+        } else {
+            return "Invalid score";
+        }
+    }
+}
